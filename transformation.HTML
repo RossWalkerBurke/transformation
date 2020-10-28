@@ -1,0 +1,62 @@
+<<!DOCTYPE html>
+<html>
+
+<head>
+    <meta http-equiv="Content-type" content="text/html" charset="UTF-8">
+    
+	<script type=""text/javascript" charset="UTF-8">
+
+	function pageLoaded () {
+
+	var canvas = document.getElementById("the_canvas");
+
+	var context = canvas.getContext("2d");
+
+            var image = document.getElementById("bike1");
+
+	    context.drawImage(image,20, 20, 250, 125);
+
+            context.translate(10, 10);
+
+	    var image = document.getElementById("bike2");
+
+            context.drawImage(image,500, 0, 300, 150);
+
+            context.rotate(-Math.PI / 15);
+
+            var image = document.getElementById("bike3");
+
+            context.drawImage(image,500, 500, 200,100);
+
+            context.scale(2, 2);
+
+            var vroom = document.getElementById("bike_sound");
+            vroom.play();
+
+        }
+    </script>
+</head>
+
+<body onload="pageLoaded()">
+
+    <h1>Images and Audio</h1>
+
+    <img src="bike1.png"
+        id="bike1" style="display: none;">
+
+    <img src="bike2.png"
+        id="bike2" style="display: none;">
+
+    <img src="bike3.png"
+        id="bike3" style="display: none;">
+
+    <canvas id="the_canvas" width="1200" height="1000" style="border: black 1px solid;">
+        Oops! looks like your browser does not support canvas tag
+    </canvas>
+
+    <audio src="CRF1100.mp3" id="bike_sound">
+        Oops! looks like your browser does not support audio tag
+    </audio>
+<body>
+
+</html>
